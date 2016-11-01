@@ -2,7 +2,7 @@ var express = require('express');
 
 var bookRouter = express.Router();
 
-var router = function(nav){
+var router = function (nav) {
     var books = [
         {
             title: 'War and Peace',
@@ -73,5 +73,5 @@ var router = function(nav){
         });
 
     return bookRouter;
-}
+};
 module.exports = router;
