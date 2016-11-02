@@ -5,6 +5,12 @@ var ObjectId = require('mongodb').ObjectID;
 
 var router = function (nav) {
 
+    bookRouter.use(function (req, res, next) {
+        if (!req.user) {
+            res.redirect('/');
+        }
+        next();
+    });
     bookRouter.route('/')
         .get(function (req, res) {
             var url =
@@ -35,7 +41,9 @@ var router = function (nav) {
             mongodb.connect(url, function (err, db) {
                 var collection = db.collection('books');
 
-                collection.findOne({_id: id},
+                collection.findOne({
+                        _id: id
+                    },
                     function (err, results) {
                         res.render('bookView', {
                             title: 'Books',
