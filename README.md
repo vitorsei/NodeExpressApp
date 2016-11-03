@@ -10,6 +10,7 @@ An application that keeps track of authors, and books, and how those two things 
  - Bower
  - EJS temp
  - JSHint
+ - Gulp
  
 ### Do this firts!
     1. It needs mongodb up and running
