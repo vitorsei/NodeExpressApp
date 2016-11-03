@@ -9,6 +9,7 @@ An application that keeps track of authors, and books, and how those two things 
  - Mongodb
  - Bower
  - EJS temp
+ - Bootstrap
  - JSHint
  - Gulp
  
